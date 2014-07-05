@@ -8,9 +8,13 @@ class BookingsMigration < ActiveRecord::Migration
       t.column :terms,            :text
       t.column :starts_at,        :datetime
       t.column :ends_at,          :datetime
+      t.column :booked_at,        :datetime
+      t.column :cancelled_at,     :datetime
+      t.column :paid_at,          :datetime
+      t.column :payment_type,     :string
       t.column :requested_amount, :decimal
       t.column :confirmed_amount, :decimal
-      t.column :state,            :string
+      t.column :booking_state,    :string
     end
 
     add_index :bookings, [:bookable_id, :bookable_type]
