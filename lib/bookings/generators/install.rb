@@ -6,6 +6,7 @@ module Bookings
       def install
         generate "bookings:migration"
         generate "bookings:booking_model"
+        generate "bookings:bookings_controller"
       end
 
     end

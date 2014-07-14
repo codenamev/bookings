@@ -25,6 +25,14 @@ class Booking < ActiveRecord::Base
     end
   end
 
+  def self.current
+    where "starts_at >= ?", Date.today.beginning_of_day
+  end
+
+  def to_s
+    "#{self.name}"
+  end
+
   private
 
   def update_booked_at
