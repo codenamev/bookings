@@ -12,3 +12,5 @@ module Bookings
     end
   end
 end
+
+ActiveRecord::Base.send :include, Bookings if defined?(ActiveRecord::Base)

@@ -22,5 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "aasm", "~> 3.2.1"
 
   spec.add_development_dependency "bundler", "~> 1.6"
+  spec.add_development_dependency('generator_spec')
   spec.add_development_dependency "rake"
 end
